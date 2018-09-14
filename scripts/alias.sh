@@ -1,0 +1,1 @@
+alias map_saver="rosrun map_server map_saver"
