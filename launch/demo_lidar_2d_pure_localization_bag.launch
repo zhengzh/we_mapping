@@ -18,9 +18,6 @@
 <launch>
   <param name="/use_sim_time" value="true" />
 
-  <node name="robot_state_publisher" pkg="robot_state_publisher"
-    type="robot_state_publisher" />
-
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find we_mapping)/configuration_files
