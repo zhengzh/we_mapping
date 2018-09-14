@@ -1,20 +1,19 @@
 set_env="source ~/catkin_cartographer/install_isolated/setup.bash"
-mapping_launch_filename="demo_backpack_2d_localization_start_trajectory"
+mapping_launch_filename="lidar_2d_localization_start_trajectory"
 start_trajectory_launch_filename="start_trajectory.launch"
-start_localization_launch_filename="demo_backpack_2d_localization_start_trajectory.launch"
+start_localization_launch_filename="lidar_2d_localization_start_trajectory.launch"
+enviroment="~/catkin_cartographer/install_isolated/setup.bash"
+launch_prefix="roslaunch we_mapping"
+tmux_name="we_mapping"
 
 # load_state_filename="/home/zh/Downloads/b2-2016-04-05-14-44-52.bag.pbstream"
-load_state_filename=$1
 # bag_filename="/home/zh/Downloads/b2-2016-04-27-12-31-41.bag"
-bag_filename=$2
-
-enviroment="~/catkin_cartographer/install_isolated/setup.bash"
-launch_prefix="roslaunch cartographer_ros"
-tmux_name="cartographer"
-
 # initial_pose="{ to_trajectory_id=0,relative_pose={translation={10,10,0},rotation={0.0,0.0,0.0}}}"
-initial_pose = $3
+bag_filename=$1
+load_state_filename="$1.pbstream"
+initial_pose=$2
 
+echo $initial_pose
 function localization_command() {
     state_filename=$1
     bag_filename=$2
