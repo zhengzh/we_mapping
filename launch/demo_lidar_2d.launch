@@ -18,8 +18,7 @@
   </node> -->
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
-      args="-d $(find cartographer_turtlebot
-          )/we_mapping/cartographer.rviz" />
+      args="-d $(find we_mapping)/rviz/cartographer.rviz" />
   <node name="playbag" pkg="rosbag" type="play"
       args="-s 3 -r 1 --clock $(arg bag_filename)" />
 
