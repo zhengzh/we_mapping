@@ -18,7 +18,7 @@
 
   <arg name="bag_filenames"/>
   <arg name="no_rviz" default="false"/>
-  <arg name="rviz_config" default="$(find we_mapping)/configuration_files/demo_turtlebot.rviz"/>
+  <arg name="rviz_config" default="$(find we_mapping)/rviz/cartographer.rviz"/>
   <arg name="configuration_directory" default="$(find we_mapping)/configuration_files"/>
   <arg name="configuration_basenames" default="urg_lidar_2d.lua"/>
 

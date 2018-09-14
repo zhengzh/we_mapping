@@ -24,7 +24,7 @@
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find we_mapping)/configuration_files
-          -configuration_basename urg_lidar_2d_localization.lua
+          -configuration_basename urg_lidar_2d_pure_localization.lua
           -load_state_filename $(arg load_state_filename)"
       output="screen">
     <remap from="echoes" to="horizontal_laser_2d" />
@@ -34,7 +34,7 @@
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
-      args="-d $(find we_mapping)/rviz/demo_2d.rviz" />
+      args="-d $(find we_mapping)/rviz/cartographer.rviz" />
   <node name="playbag" pkg="rosbag" type="play"
       args="--clock --rate=3.0 $(arg bag_filename)" />
 </launch>
