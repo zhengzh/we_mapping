@@ -16,12 +16,13 @@
 
 <launch>
 
-  <arg name="initial_pose" default="{ to_trajectory_id=0, relative_pose={translation={10, 10, 0},rotation={0.0,0.0,0.0} }}"/>
+  <arg name="initial_pose" default="
+    { to_trajectory_id=0, relative_pose={translation={10, 10, 0},rotation={0.0,0.0,0.0} }}"/>
 
    <node name="cartographer_start_trajectory" pkg="cartographer_ros"
       type="cartographer_start_trajectory" args="
           -configuration_directory=$(find we_mapping)/configuration_files
-          -configuration_basename=.lua
+          -configuration_basename=urg_lidar_2d_pure_localization.lua
           --initial_pose='$(arg initial_pose)'"
       output="screen">
   </node>

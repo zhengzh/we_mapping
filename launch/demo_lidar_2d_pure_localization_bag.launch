@@ -35,4 +35,6 @@
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
       args="-d $(find we_mapping)/rviz/demo_2d.rviz" />
+  <node name="playbag" pkg="rosbag" type="play"
+      args="--clock --rate=3.0 $(arg bag_filename)" />
 </launch>
