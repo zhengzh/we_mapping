@@ -6,9 +6,10 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Sensing1
-        - /Navigation1
         - /Navigation1/Exploration1
+        - /Navigation1/Global Costmap1
+        - /markers1
+        - /markers1/waypoints1/Status1
       Splitter Ratio: 0.494924009
     Tree Height: 621
   - Class: rviz/Selection
@@ -68,19 +69,89 @@ Visualization Manager:
       Value: false
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        base_footprint:
+          Value: false
+        base_laser:
+          Value: false
+        base_laser_mount:
+          Value: false
+        base_link:
+          Value: true
+        front_bumper_link:
+          Value: false
+        front_left_wheel_link:
+          Value: false
+        front_right_wheel_link:
+          Value: false
+        imu_link:
+          Value: false
+        inertial_link:
+          Value: false
+        map:
+          Value: true
+        odom:
+          Value: true
+        rear_bumper_link:
+          Value: false
+        rear_left_wheel_link:
+          Value: false
+        rear_right_wheel_link:
+          Value: false
+        top_chassis_link:
+          Value: false
+        top_plate_front_link:
+          Value: false
+        top_plate_link:
+          Value: false
+        top_plate_rear_link:
+          Value: false
+        user_rail_link:
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        map:
+          odom:
+            base_link:
+              base_footprint:
+                {}
+              front_bumper_link:
+                {}
+              front_left_wheel_link:
+                {}
+              front_right_wheel_link:
+                {}
+              imu_link:
+                {}
+              inertial_link:
+                {}
+              rear_bumper_link:
+                {}
+              rear_left_wheel_link:
+                {}
+              rear_right_wheel_link:
+                {}
+              top_chassis_link:
+                {}
+              top_plate_link:
+                base_laser_mount:
+                  base_laser:
+                    {}
+                top_plate_front_link:
+                  {}
+                top_plate_rear_link:
+                  {}
+              user_rail_link:
+                {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Class: rviz/InteractiveMarkers
       Enable Transparency: true
       Enabled: true
@@ -110,7 +181,7 @@ Visualization Manager:
               Value: true
             Value: false
           Enabled: true
-          Keep: 10
+          Keep: 1
           Name: Odometry
           Position Tolerance: 0.100000001
           Shape:
@@ -261,7 +332,7 @@ Visualization Manager:
           Unreliable: false
           Use Timestamp: false
           Value: true
-        - Alpha: 0.699999988
+        - Alpha: 0.100000001
           Class: rviz/Map
           Color Scheme: costmap
           Draw Behind: true
@@ -271,7 +342,7 @@ Visualization Manager:
           Unreliable: false
           Use Timestamp: false
           Value: true
-        - Alpha: 0.699999988
+        - Alpha: 0.200000003
           Class: rviz/Map
           Color Scheme: costmap
           Draw Behind: false
@@ -329,6 +400,18 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: Navigation
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Marker
+          Enabled: true
+          Marker Topic: /waypoint_markers
+          Name: waypoints
+          Namespaces:
+            waypoints: true
+          Queue Size: 100
+          Value: true
+      Enabled: true
+      Name: markers
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -346,31 +429,31 @@ Visualization Manager:
     - Class: rviz/SetGoal
       Topic: /move_base_simple/goal
     - Class: rviz/PublishPoint
-      Single click: false
+      Single click: true
       Topic: /clicked_point
   Value: true
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 39.3390121
+      Distance: 18.5943222
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 5.21549368
-        Y: 2.76012278
-        Z: -0.330476224
+        X: 2.0931108
+        Y: 1.65551567
+        Z: -0.944582462
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.959800005
+      Pitch: 1.27479661
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.22039986
+      Yaw: 0.0372293293
     Saved: ~
 Window Geometry:
   Displays:
@@ -388,5 +471,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1600
-  X: 65
-  Y: 27
+  X: 161
+  Y: 91

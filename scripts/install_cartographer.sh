@@ -14,11 +14,6 @@ else
   sudo apt-get install cmake -y
 fi
 
-catkin_ws_directory="~/catkin_cartographer"
-devel_directory=${catkin_ws_directory}/devel_isolated
-build_directory=${catkin_ws_directory}/build_isolated
-install_directory=${catkin_ws_directory}/install_isolated
-
 sudo apt-get install -y \
     g++ \
     git \
@@ -35,8 +30,6 @@ sudo apt-get install -y \
 
 sudo apt-get install -y python-wstool python-rosdep ninja-build
 
-mkdir ${catkin_ws_directory}
-cd ${catkin_ws_directory}
 mkdir src
 wstool init src
 
@@ -52,6 +45,6 @@ src/cartographer/scripts/install_proto3.sh
 
 # Build and install.
 rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
-catkin_make_isolated --install --use-ninja
-source install_isolated/setup.bash
+catkin_make_isolated --install --use-ninja --cmake-args -DCATKIN_ENABLE_TESTING=false
+source install_isolated/setup.bash --extend
 # alias build="rm ${devel_directory} -rf; rm ${install_directory} -rf; rm ${build_directory} -rf; catkin_make_isolated --install --use-ninja"

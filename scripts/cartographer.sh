@@ -1,7 +1,7 @@
 mapping_launch_filename="lidar_2d_localization_start_trajectory"
 start_trajectory_launch_filename="start_trajectory.launch"
 start_localization_launch_filename="lidar_2d_localization_start_trajectory.launch"
-enviroment="~/catkin_cartographer/install_isolated/setup.bash"
+enviroment="~/catkin_cartographer/install_isolated/setup.bash --extend"
 launch_prefix="roslaunch we_mapping"
 tmux_name="we_mapping"
 
