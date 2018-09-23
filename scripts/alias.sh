@@ -1,6 +1,6 @@
 alias map_saver="rosrun map_server map_saver"
 
-source ~/catkin_cartographer/install_isolated/setup.bash --extend
+# source ~/catkin_cartographer/install_isolated/setup.bash --extend
 
 prefix="roslaunch we_mapping"
 
