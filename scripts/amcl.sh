@@ -2,10 +2,10 @@
 map="$1"
 tmux_name="amcl"
 launch_prefix="roslaunch we_mapping"
-enviroment="~/catkin_navigation/devel/setup.bash"
+# enviroment="~/catkin_navigation/devel/setup.bash"
 
 function tmux_wrapper() {
-    echo "tmux new-window -t $tmux_name \"source $enviroment; $1\" \; detach \;"
+    echo "tmux new-window -t $tmux_name \"$1\" \; detach \;"
 }
 
 function start_amcl() {

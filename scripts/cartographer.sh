@@ -1,7 +1,7 @@
 mapping_launch_filename="lidar_2d_localization_start_trajectory"
 start_trajectory_launch_filename="start_trajectory.launch"
 start_localization_launch_filename="lidar_2d_localization_start_trajectory.launch"
-enviroment="~/catkin_cartographer/install_isolated/setup.bash --extend"
+# enviroment="~/catkin_cartographer/install_isolated/setup.bash --extend"
 launch_prefix="roslaunch we_mapping"
 tmux_name="we_mapping"
 
@@ -30,7 +30,7 @@ function start_trajectory_command() {
 # echo $(start_trajectory "{ to_trajectory_id=0, relative_pose={translation={10, 10, 0},rotation={0.0,0.0,0.0} }}")
 
 function tmux_wrapper() {
-    echo "tmux new-window -t $tmux_name \"source $enviroment; $1\" \; detach \;"
+    echo "tmux new-window -t $tmux_name \"$1\" \; detach \;"
 }
 
 function start_localization() {
