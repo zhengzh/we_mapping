@@ -1,6 +1,6 @@
 if [ $# -eq 0 ]; then
     map="$(rospack find we_mapping)/maps/map.yaml"
-elif [$# -eq 1]; then
+elif [ $# -eq 1 ]; then
     map="$1"
 fi
 tmux_name="amcl"
