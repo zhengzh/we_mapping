@@ -1,6 +1,6 @@
 alias map_saver="rosrun map_server map_saver"
 
-source ~/catkin_cartographer/install_isolated/setup.bash --extend
+# source ~/catkin_cartographer/install_isolated/setup.bash --extend
 
 prefix="roslaunch we_mapping"
 
@@ -31,7 +31,7 @@ function localization_start_trajectory() {
 function start_trajectory() {
     if [ $# -eq 0 ]; then
         $prefix start_trajectory.launch
-    elif [$# -eq 1]; then
+    elif [ $# -eq 1 ]; then
         $prefix start_trajectory.launch $1
     fi
 }
