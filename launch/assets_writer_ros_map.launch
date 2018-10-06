@@ -1,0 +1,11 @@
+<launch>
+  <arg name="config_file" default="assets_writer_lidar_2d.lua"/>
+  <node name="cartographer_assets_writer" pkg="cartographer_ros" required="true"
+      type="cartographer_assets_writer" args="
+          -configuration_directory $(find we_mapping)/configuration_files
+          -configuration_basename $(arg config_file)
+          -bag_filenames $(arg bag_filenames)
+          -pose_graph_filename $(arg pose_graph_filename)"
+      output="screen">
+  </node>
+</launch>

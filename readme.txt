@@ -15,3 +15,5 @@ follow waypoints
 
 
 multiple laserlaser
+
+offline_mapping `rospack find we_mapping`/bags/floor1.bag

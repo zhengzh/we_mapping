@@ -1,6 +1,6 @@
 <launch>
   <node name="rviz" pkg="rviz" type="rviz" required="true"
-      args="-d $(find we_mapping)/rviz/gmapping.rviz" />
+      args="-d $(find we_mapping)/rviz/cartographer.rviz" />
   <node name="cartographer_offline_node" pkg="cartographer_ros"
       type="cartographer_offline_node" args="
           -configuration_directory $(find we_mapping)/configuration_files
