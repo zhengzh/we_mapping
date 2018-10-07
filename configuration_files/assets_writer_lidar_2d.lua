@@ -4,7 +4,7 @@ options = {
       {
         action = "min_max_range_filter",
         min_range = 0.1,
-        max_range = 28.0,
+        max_range = 25.0,
       },
       {
         action = "write_ros_map",
