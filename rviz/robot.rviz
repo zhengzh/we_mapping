@@ -10,6 +10,7 @@ Panels:
         - /Navigation1/Exploration1
         - /Navigation1/Global Costmap1
         - /Navigation1/Local Costmap1
+        - /Navigation1/Local Plan1
         - /markers1
       Splitter Ratio: 0.494924
     Tree Height: 843
@@ -80,8 +81,6 @@ Visualization Manager:
           Value: true
         laser_link:
           Value: true
-        little_laser_link:
-          Value: true
         map:
           Value: true
         odom:
@@ -98,8 +97,6 @@ Visualization Manager:
               back_laser_link:
                 {}
               laser_link:
-                {}
-              little_laser_link:
                 {}
       Update Interval: 0
       Value: true
@@ -273,7 +270,7 @@ Visualization Manager:
         - Alpha: 1
           Buffer Length: 1
           Class: rviz/Path
-          Color: 255; 0; 0
+          Color: 0; 85; 0
           Enabled: true
           Head Diameter: 0.3
           Head Length: 0.2
