@@ -3,7 +3,7 @@ options = {
     pipeline = {
       {
         action = "min_max_range_filter",
-        min_range = 0.1,
+        min_range = 0.3,
         max_range = 25.0,
       },
       {

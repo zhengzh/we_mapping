@@ -22,7 +22,8 @@ function localization() {
 }
 
 function assets_writer_ros_map() {
-    $prefix assets_writer_ros_map.launch bag_filenames:="$bag_directory/$1" pose_graph_filename:="$bag_directory/$1.pbstream"
+    $prefix assets_writer_ros_map.launch bag_filenames:="$bag_directory/$1" pose_graph_filename:="$bag_directory/$1.pbstream" \
+        map_filename:="$bag_directory/$1_map.yaml"
 }
 
 function pbstream_to_ros_map() {
