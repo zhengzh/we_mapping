@@ -1,0 +1,14 @@
+<launch>
+  <arg name="config_file" default="assets_writer_lidar_2d.lua"/>
+  <node name="cartographer_assets_writer" pkg="cartographer_ros"
+      type="cartographer_assets_writer" args="
+          -configuration_directory $(find we_mapping)/configuration_files
+          -configuration_basename $(arg config_file)
+          -bag_filenames $(arg bag_filenames)
+          -pose_graph_filename $(arg pose_graph_filename)"
+      output="screen">
+  </node>
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find we_mapping)/rviz/view_costmap.rviz"/>
+  <param name="/use_sim_time" value="false" />
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_filename)"/>
+</launch>
