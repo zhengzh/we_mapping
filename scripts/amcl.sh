@@ -19,7 +19,8 @@ function start_amcl() {
         eval $(tmux_wrapper "$launch_prefix we_amcl.launch")
     else
     
-        eval $(tmux_wrapper "$launch_prefix we_amcl.launch map_file:=$map")        
+        # eval $(tmux_wrapper "$launch_prefix we_amcl.launch map_file:=$map")
+        eval $(tmux_wrapper "$launch_prefix amcl_husky.launch")
     fi
 }
 
