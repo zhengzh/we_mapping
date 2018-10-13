@@ -1,0 +1,10 @@
+git clone kejia@202.141.161.29:~/shengyi/we_mapping.git
+git clone kejia@202.141.161.29:~/shengyi/python_sm.git
+git clone kejia@202.141.161.29:~/shengyi/common.git
+git clone kejia@202.141.161.29:~/shengyi/can_motor_manager.git
+git clone https://github.com/ros-planning/navigation.git -b kinetic-devel
+
+# install
+cd $CATKIN_WS
+rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
+catkin_make
