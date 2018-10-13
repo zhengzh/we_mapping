@@ -16,11 +16,11 @@ function start_amcl() {
     tmux kill-session -t $tmux_name
     tmux new-session -s $tmux_name -d
     if [ -z "$map" ]; then
-        eval $(tmux_wrapper "$launch_prefix we_amcl.launch")
+        eval $(tmux_wrapper "$launch_prefix we_amcl.launch") #no use
     else
     
-        # eval $(tmux_wrapper "$launch_prefix we_amcl.launch map_file:=$map")
-        eval $(tmux_wrapper "$launch_prefix amcl_husky.launch")
+        eval $(tmux_wrapper "$launch_prefix we_amcl.launch map_file:=$map")
+        # eval $(tmux_wrapper "$launch_prefix amcl_husky.launch")
     fi
 }
 

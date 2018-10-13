@@ -87,17 +87,17 @@ Visualization Manager:
         odom:
           Value: true
         rear_bumper_link:
-          Value: true
+          Value: false
         rear_left_wheel_link:
-          Value: true
+          Value: false
         rear_right_wheel_link:
-          Value: true
+          Value: false
         top_chassis_link:
-          Value: true
+          Value: false
         top_plate_link:
-          Value: true
+          Value: false
         user_rail_link:
-          Value: true
+          Value: false
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -394,6 +394,47 @@ Visualization Manager:
           Topic: /move_base/current_goal
           Unreliable: false
           Value: true
+        - Alpha: 0.699999988
+          Class: rviz/Map
+          Color Scheme: map
+          Draw Behind: false
+          Enabled: true
+          Name: Planner Costmap
+          Topic: /planner/costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Class: rviz/Polygon
+          Color: 25; 255; 0
+          Enabled: true
+          Name: Footprint
+          Topic: /move_base/local_costmap/footprint
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 170; 85; 127
+          Enabled: true
+          Head Diameter: 0.300000012
+          Head Length: 0.200000003
+          Length: 0.300000012
+          Line Style: Lines
+          Line Width: 0.0299999993
+          Name: Planner Plan
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.0299999993
+          Shaft Diameter: 0.100000001
+          Shaft Length: 0.100000001
+          Topic: /planner/planner/plan
+          Unreliable: false
+          Value: true
       Enabled: true
       Name: Navigation
     - Class: rviz/Group
@@ -403,7 +444,7 @@ Visualization Manager:
           Marker Topic: /waypoint_markers
           Name: waypoints
           Namespaces:
-            waypoints: true
+            {}
           Queue Size: 100
           Value: true
       Enabled: true
@@ -438,18 +479,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.963187635
-        Y: 0.23937273
-        Z: -0.478384644
+        X: 0.562890053
+        Y: 0.546233594
+        Z: -0.434060752
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.35479653
+      Pitch: 1.33979654
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.25223255
+      Yaw: 0.574048162
     Saved: ~
 Window Geometry:
   Displays:

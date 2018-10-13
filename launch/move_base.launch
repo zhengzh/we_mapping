@@ -57,5 +57,6 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCL
 
     <!-- <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/> -->
   </node>
+  <include file="$(find we_mapping)/launch/standalone_planner.launch"/>  
 
 </launch>

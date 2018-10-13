@@ -1,0 +1,18 @@
+<launch>
+  <!-- <include file="$(find we_mapping)/launch/velocity_smoother.launch"/> -->
+  <node pkg="global_planner" type="planner" respawn="false" name="planner" output="screen">
+
+    <rosparam file="$(find we_mapping)/config/standalone_planner.yaml" command="load"/>
+
+    <!-- observation sources located in costmap_common.yaml -->
+    <rosparam file="$(find we_mapping)/config/costmap_common.yaml" command="load" ns="costmap" />
+
+    <rosparam file="$(find we_mapping)/config/costmap_global_laser.yaml" command="load" ns="costmap"/>
+    <param name="costmap/width" value="3.0"/>
+    <param name="costmap/height" value="3.0"/>
+    <param name="costmap/global_frame" value="base_link"/>
+
+    <!-- <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/> -->
+  </node>
+
+</launch>
