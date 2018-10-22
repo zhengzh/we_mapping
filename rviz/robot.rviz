@@ -7,6 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /TF1/Frames1
+        - /Sensing1
         - /Navigation1/Exploration1
         - /Navigation1/Global Costmap1
         - /Navigation1/Local Costmap1
@@ -207,11 +208,11 @@ Visualization Manager:
         - Arrow Length: 0.3
           Class: rviz/PoseArray
           Color: 255; 25; 0
-          Enabled: false
+          Enabled: true
           Name: PoseArray
           Topic: /particlecloud
           Unreliable: false
-          Value: false
+          Value: true
       Enabled: true
       Name: Sensing
     - Class: rviz/Group
@@ -374,7 +375,7 @@ Visualization Manager:
           Marker Topic: /waypoint_markers
           Name: waypoints
           Namespaces:
-            {}
+            waypoints: true
           Queue Size: 100
           Value: true
       Enabled: true
@@ -401,16 +402,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 16.3815
+      Distance: 23.6282
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -4.35597
-        Y: 0.256334
-        Z: -0.196167
+        X: 2.468
+        Y: 4.77166
+        Z: -0.878074
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 1.4798
