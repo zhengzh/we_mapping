@@ -9,7 +9,7 @@
 
     <rosparam file="$(find we_mapping)/config/costmap_global_laser.yaml" command="load" ns="costmap"/>
     <param name="costmap/width" value="4.0"/>
-    <param name="costmap/height" value="2.5"/>
+    <param name="costmap/height" value="1.6"/>
     <param name="costmap/global_frame" value="base_link"/>
 
     <!-- <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/> -->
